@@ -38,15 +38,73 @@ function Logo({ size = 40 }) {
 }
 
 const NAV = [
-  { id: "about", label: "About" },
-  { id: "divisions", label: "Divisions" },
-  { id: "real-estate", label: "EVA Ecosystem" },
-  { id: "industries", label: "Industries" },
+  { id: "about", label: "About Us" },
+  { id: "leadership", label: "Leadership" },
+  { id: "divisions", label: "Our Businesses" },
+  { id: "affiliates", label: "Our Group" },
   { id: "projects", label: "Projects" },
   { id: "research", label: "Insights" },
   { id: "careers", label: "Careers" },
-  { id: "investors", label: "Investors" },
 ];
+
+
+const AFFILIATES = [
+  {
+    name: "AWFP Global",
+    url: "https://awfpnglobal.com",
+    description: "Professional and institutional development platform within the wider Eva ecosystem.",
+  },
+  {
+    name: "CICFA Global",
+    url: "https://cicfaglobal.com",
+    description: "Professional and capacity-building organisation serving its specialist community.",
+  },
+  {
+    name: "CIPFI Global",
+    url: "https://cipfiglobal.com",
+    description: "Professional institute and knowledge platform supporting standards and development.",
+  },
+  {
+    name: "JVEF Global",
+    url: "https://jvefglobal.org",
+    description: "Global-facing initiative focused on professional and institutional advancement.",
+  },
+  {
+    name: "CIFIP Nigeria",
+    url: "https://cifipn.org",
+    description: "Professional and institutional platform connected to the group's wider ecosystem.",
+  },
+  {
+    name: "EIBS Global",
+    url: "https://eibsglobal.com.ng",
+    description: "Business and professional development platform within the Eva network.",
+  },
+  {
+    name: "ICCGLS",
+    url: "https://iccgls.com",
+    description: "Professional and standards-focused organisation serving its specialist network.",
+  },
+  {
+    name: "TPAGA",
+    url: "https://tpaga.org.ng",
+    description: "Professional and governance-focused organisation within the broader group ecosystem.",
+  },
+  {
+    name: "AWPFM Global",
+    url: "https://awpfmglobal.org.ng",
+    description: "Professional development and management-focused organisation.",
+  },
+];
+
+const LEADERSHIP = {
+  name: "CEO / Managing Director",
+  role: "Group Chief Executive Officer / Managing Director",
+  image: "/ceo.png",
+  message:
+    "Our ambition is to build enduring businesses that create measurable value, strengthen institutions and contribute meaningfully to Africa's economic development. At Eva Global Group, we believe sustainable growth is built on integrity, innovation, professional excellence and the ability to turn opportunities into lasting value.",
+  bio:
+    "Add the CEO's real biography here — background, career highlights, and achievements.",
+};
 
 const VALUES = [
   { icon: ShieldCheck, title: "Integrity", copy: "We build and secure what we say we will, on terms our partners can verify." },
@@ -109,7 +167,7 @@ const INDUSTRIES = [
   { icon: GraduationCap, name: "Education" },
   { icon: HardHat, name: "Construction" },
   { icon: HomeIcon, name: "Real Estate" },
-  { icon: Wrench, name: "Manufacturing" },
+  { icon: Wrench, name: "Mining & Manufacturing" },
   { icon: Briefcase, name: "SMEs" },
 ];
 
@@ -226,7 +284,7 @@ export default function EvaGlobalGroup() {
             <Logo size={40} />
             <div className="text-left">
               <p className="text-white font-semibold tracking-wide leading-none text-sm">EVA GLOBAL GROUP</p>
-              <p className="font-mono text-[10px] tracking-[0.2em] text-slate-500 mt-1">ENGINEERING · TECHNOLOGY · SECURITY</p>
+              <p className="font-mono text-[10px] tracking-[0.2em] text-slate-500 mt-1">BUILDING VALUE · CREATING IMPACT</p>
             </div>
           </button>
 
@@ -279,61 +337,63 @@ export default function EvaGlobalGroup() {
 
       {/* ---------------- HERO ---------------- */}
       <section id="home" className="relative bg-slate-950 overflow-hidden">
-        <div className="absolute -right-40 -top-40 w-[560px] h-[560px] rounded-full bg-amber-500/10 blur-3xl" />
-        <div className="absolute -left-32 bottom-0 w-[420px] h-[420px] rounded-full bg-blue-500/10 blur-3xl" />
+  <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(245,158,11,0.14),transparent_34%),radial-gradient(circle_at_10%_80%,rgba(30,64,175,0.12),transparent_32%)]" />
 
-        <div className="relative max-w-5xl mx-auto px-6 pt-24 pb-28 sm:pt-32 sm:pb-36 text-center flex flex-col items-center">
-          <Eyebrow>A Diversified Enterprise Group</Eyebrow>
-          <h1 className="font-serif text-white text-4xl sm:text-6xl leading-[1.05] max-w-4xl">
-            Engineering infrastructure.
-            <br />
-            Securing digital assets.
-            <br />
-            <span className="text-amber-500">Driving innovation.</span>
-          </h1>
-          <p className="mt-8 max-w-2xl text-slate-400 text-lg leading-relaxed">
-            Eva Global Group delivers integrated engineering, construction, procurement, cybersecurity,
-            digital forensics, consulting, training, and real estate technology solutions across
-            public and private sectors.
-          </p>
-          <div className="mt-10 flex flex-wrap gap-4 justify-center">
-            <button
-              onClick={() => scrollTo("divisions")}
-              className="inline-flex items-center gap-2 bg-amber-500 hover:bg-amber-400 text-slate-900 font-semibold px-6 py-3.5 rounded-lg shadow-lg shadow-amber-500/20 hover:shadow-amber-400/30 hover:-translate-y-0.5 transition-all"
-            >
-              Explore Our Businesses <ArrowUpRight size={18} />
-            </button>
-            <button
-              onClick={() => scrollTo("contact")}
-              className="inline-flex items-center gap-2 border border-slate-800 hover:border-amber-500 text-white font-semibold px-6 py-3.5 rounded-lg hover:-translate-y-0.5 transition-all"
-            >
-              Contact Us
-            </button>
-          </div>
+  <div className="absolute right-[-180px] top-[-180px] w-[520px] h-[520px] rounded-full border border-amber-500/10" />
+  <div className="absolute right-[-110px] top-[-110px] w-[380px] h-[380px] rounded-full border border-slate-700/40" />
 
-          <dl className="mt-20 grid grid-cols-2 sm:grid-cols-4 gap-8 sm:gap-14 border-t border-slate-800 pt-10 w-full max-w-3xl justify-items-center">
-            {[
-              { k: "6", v: "Business Divisions" },
-              { k: "9", v: "Ecosystem Functions" },
-              { k: "5+", v: "Sectors Served" },
-              { k: "1", v: "Integrated Group" },
-            ].map((s) => (
-              <div key={s.v} className="text-center">
-                <dt className="font-serif text-3xl text-white">{s.k}</dt>
-                <dd className="font-mono text-xs tracking-wider uppercase text-slate-500 mt-1">{s.v}</dd>
-              </div>
-            ))}
-          </dl>
-        </div>
-      </section>
+  <div className="relative max-w-7xl mx-auto px-6 min-h-[calc(100vh-80px)] flex items-center justify-center">
+
+    <div className="max-w-4xl w-full text-center mx-auto flex flex-col items-center">
+
+      <Eyebrow>A Diversified Enterprise Group</Eyebrow>
+
+      <h1 className="font-serif text-white text-5xl sm:text-7xl lg:text-8xl leading-[0.98] tracking-tight">
+        Building value.
+        <br />
+        <span className="text-amber-500">Connecting opportunity.</span>
+        <br />
+        Creating impact.
+      </h1>
+
+      <p className="mt-8 max-w-2xl text-slate-300 text-lg sm:text-xl leading-relaxed">
+        Eva Global Group is a diversified Nigerian enterprise bringing together
+        business, professional services, technology, real estate, construction,
+        procurement and strategic initiatives under one integrated group.
+      </p>
+
+      <div className="mt-10 flex flex-wrap justify-center gap-4">
+        <button
+          onClick={() => scrollTo("divisions")}
+          className="inline-flex items-center gap-2 bg-amber-500 hover:bg-amber-400 text-slate-950 font-semibold px-6 py-3.5 rounded-lg shadow-lg shadow-amber-500/20 hover:-translate-y-0.5 transition-all"
+        >
+          Explore Our Businesses
+          <ArrowUpRight size={18} />
+        </button>
+
+        <button
+          onClick={() => scrollTo("about")}
+          className="inline-flex items-center gap-2 border border-slate-700 hover:border-amber-500 text-white font-semibold px-6 py-3.5 rounded-lg hover:-translate-y-0.5 transition-all"
+        >
+          About Eva Global Group
+        </button>
+      </div>
+
+      <div className="mt-16 grid grid-cols-2 sm:grid-cols-4 border-t border-slate-800 pt-8 max-w-4xl w-full text-left">
+        {/* existing statistics */}
+      </div>
+
+    </div>
+  </div>
+</section>
 
       {/* ---------------- GROUP OVERVIEW / ABOUT ---------------- */}
       <section id="about" className="bg-white py-24 sm:py-28">
         <div className="max-w-7xl mx-auto px-6">
           <SectionHeading
             eyebrow="Group Overview"
-            title="One group. Nine capabilities. A single integrated ecosystem."
-            description="Eva Global Group is a diversified African enterprise delivering engineering, construction, technology, cybersecurity, digital forensics, procurement, and real estate innovation solutions — built to compete for government contracts, enterprise security engagements, and major infrastructure programmes."
+            title="A diversified group built around long-term value creation."
+            description="Eva Global Group brings together complementary businesses, professional institutions and strategic initiatives under a common vision of responsible growth, professional excellence and sustainable value creation. Our model is designed to connect expertise, capital, technology and opportunity across sectors."
           />
 
           <div className="mt-16 grid lg:grid-cols-3 gap-10">
@@ -343,7 +403,7 @@ export default function EvaGlobalGroup() {
                 <div>
                   <h3 className="font-semibold text-slate-900">Vision</h3>
                   <p className="text-slate-600 text-sm mt-1 leading-relaxed">
-                    To be Africa's most trusted integrated infrastructure, technology, and security group.
+                    To build a respected African group of enduring businesses and institutions that create value, unlock opportunity and contribute to sustainable economic development.
                   </p>
                 </div>
               </div>
@@ -372,13 +432,73 @@ export default function EvaGlobalGroup() {
         </div>
       </section>
 
-      {/* ---------------- BUSINESS DIVISIONS ---------------- */}
+      {/* ---------------- LEADERSHIP ---------------- */}
+      <section id="leadership" className="bg-slate-100 py-24 sm:py-28 border-y border-slate-200">
+        <div className="max-w-7xl mx-auto px-6">
+          <SectionHeading
+            eyebrow="Leadership"
+            title="Leadership with purpose. Execution with discipline."
+            description="The Group is led by a management team focused on building durable businesses, strengthening institutions and creating long-term value for stakeholders."
+          />
+
+          <div className="mt-14 grid lg:grid-cols-[0.9fr_1.1fr] gap-10 items-stretch">
+            <div className="relative min-h-[420px] bg-slate-950 rounded-2xl overflow-hidden border border-slate-800">
+              {LEADERSHIP.image ? (
+                <img
+                  src={LEADERSHIP.image}
+                  alt={LEADERSHIP.name}
+                  className="absolute inset-0 w-full h-full object-cover object-top"
+                />
+              ) : (
+                <div className="absolute inset-0 flex items-center justify-center bg-[radial-gradient(circle_at_50%_35%,rgba(245,158,11,0.18),transparent_35%),linear-gradient(145deg,#0f172a,#020617)]">
+                  <div className="text-center px-8">
+                    <div className="mx-auto w-28 h-28 rounded-full border border-amber-500/50 bg-slate-900 flex items-center justify-center">
+                      <Users size={46} className="text-amber-500" />
+                    </div>
+                    <p className="font-mono text-[10px] tracking-[0.25em] uppercase text-slate-500 mt-6">
+                      Executive Portrait
+                    </p>
+                    <p className="text-white font-serif text-2xl mt-2">{LEADERSHIP.name}</p>
+                    <p className="text-slate-400 text-sm mt-1">{LEADERSHIP.role}</p>
+                  </div>
+                </div>
+              )}
+              <div className="absolute left-6 bottom-6">
+                <span className="inline-flex items-center gap-2 bg-amber-500 text-slate-950 text-xs font-semibold px-3 py-2 rounded-md">
+                  Group Leadership
+                </span>
+              </div>
+            </div>
+
+            <div className="bg-white rounded-2xl border border-slate-200 p-8 sm:p-10 flex flex-col justify-center">
+              <Eyebrow>Message from the Group</Eyebrow>
+              <h3 className="font-serif text-3xl sm:text-4xl text-slate-900 leading-tight">
+                {LEADERSHIP.name}
+              </h3>
+              <p className="text-amber-600 text-sm font-semibold mt-2">{LEADERSHIP.role}</p>
+
+              <div className="mt-8 flex gap-4">
+                <Quote className="text-amber-500 shrink-0 mt-1" size={24} />
+                <p className="text-slate-600 text-base sm:text-lg leading-relaxed">
+                  {LEADERSHIP.message}
+                </p>
+              </div>
+
+              <div className="mt-8 pt-7 border-t border-slate-200">
+                <p className="text-sm text-slate-500 leading-relaxed">{LEADERSHIP.bio}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ---------------- BUSINESS DIVISIONS ---------------- *}
       <section id="divisions" className="bg-slate-50 py-24 sm:py-28 border-y border-slate-200">
         <div className="max-w-7xl mx-auto px-6">
           <SectionHeading
             eyebrow="Our Business Divisions"
-            title="Six divisions. One accountable group."
-            description="Each division operates with its own specialists and standards, while reporting into the same governance and quality framework."
+            title="Distinct businesses. One accountable group."
+            description="Our operating businesses bring together specialist capabilities while benefiting from shared governance, standards, technology and strategic direction at group level."
           />
 
           <div className="mt-14 grid lg:grid-cols-[280px_1fr] gap-10">
@@ -438,6 +558,75 @@ export default function EvaGlobalGroup() {
                 );
               })()}
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ---------------- GROUP AFFILIATES ---------------- */}
+      <section id="affiliates" className="bg-white py-24 sm:py-28">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6">
+            <SectionHeading
+              eyebrow="Our Group"
+              title="An ecosystem of affiliated organisations and strategic platforms."
+              description="Eva Global Group serves as the central corporate platform connecting a growing network of affiliated organisations. Explore each platform directly from the group."
+            />
+            <span className="font-mono text-xs uppercase tracking-widest text-slate-400">
+              10+ Affiliate Platforms
+            </span>
+          </div>
+
+          <div className="mt-14 grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+            {AFFILIATES.map((affiliate, index) => (
+              <a
+                key={affiliate.url}
+                href={affiliate.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group border border-slate-200 rounded-2xl p-6 hover:border-amber-400 hover:shadow-xl hover:-translate-y-1 transition-all bg-white"
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div className="w-11 h-11 rounded-xl bg-slate-950 text-amber-500 flex items-center justify-center font-mono text-xs">
+                    {String(index + 1).padStart(2, "0")}
+                  </div>
+                  <ArrowUpRight size={18} className="text-slate-400 group-hover:text-amber-500 transition-colors" />
+                </div>
+                <h3 className="font-serif text-2xl text-slate-900 mt-6 group-hover:text-amber-600 transition-colors">
+                  {affiliate.name}
+                </h3>
+                <p className="text-sm text-slate-600 mt-3 leading-relaxed min-h-[60px]">
+                  {affiliate.description}
+                </p>
+                <div className="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between">
+                  <span className="font-mono text-[10px] uppercase tracking-wider text-slate-400 truncate">
+                    {affiliate.url.replace("https://", "")}
+                  </span>
+                  <span className="text-xs font-semibold text-slate-800 group-hover:text-amber-600">
+                    Visit
+                  </span>
+                </div>
+              </a>
+            ))}
+          </div>
+
+          <div className="mt-12 bg-slate-950 rounded-2xl p-8 sm:p-10 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8">
+            <div>
+              <Eyebrow>One Group. Multiple Platforms.</Eyebrow>
+              <h3 className="font-serif text-2xl sm:text-3xl text-white">
+                Connecting businesses, institutions and professional communities.
+              </h3>
+              <p className="text-slate-400 text-sm mt-3 max-w-2xl leading-relaxed">
+                The Eva ecosystem is designed to create strategic connections between
+                commercial activity, professional development, technology, institutional
+                capacity and long-term value creation.
+              </p>
+            </div>
+            <button
+              onClick={() => scrollTo("contact")}
+              className="shrink-0 inline-flex items-center justify-center gap-2 bg-amber-500 hover:bg-amber-400 text-slate-950 font-semibold px-6 py-3.5 rounded-lg"
+            >
+              Partner With Eva <ArrowUpRight size={18} />
+            </button>
           </div>
         </div>
       </section>
@@ -812,38 +1001,76 @@ export default function EvaGlobalGroup() {
       {/* ---------------- FOOTER ---------------- */}
       <footer className="bg-slate-950 border-t border-slate-800 pt-16 pb-8">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-10">
-            <div className="lg:col-span-2">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-12 gap-10">
+            <div className="lg:col-span-4">
               <div className="flex items-center gap-3">
-                <Logo size={36} />
-                <p className="text-white font-semibold text-sm">EVA GLOBAL GROUP</p>
+                <Logo size={40} />
+                <div>
+                  <p className="text-white font-semibold text-sm">EVA GLOBAL GROUP</p>
+                  <p className="font-mono text-[9px] tracking-[0.18em] text-slate-500 mt-1">BUILDING VALUE · CREATING IMPACT</p>
+                </div>
               </div>
-              <p className="text-slate-500 text-sm mt-4 max-w-xs leading-relaxed">
-                Engineering infrastructure. Securing digital assets. Driving innovation across
-                construction, technology, cybersecurity, and real estate.
+              <p className="text-slate-500 text-sm mt-5 max-w-sm leading-relaxed">
+                A diversified Nigerian enterprise connecting businesses, professional
+                services, technology, real estate and strategic initiatives under one group.
               </p>
             </div>
-            <div>
-              <p className="font-mono text-xs uppercase tracking-widest text-slate-500 mb-4">Divisions</p>
-              <ul className="space-y-2">
-                {DIVISIONS.slice(0, 5).map((d) => (
-                  <li key={d.name}><button onClick={() => scrollTo("divisions")} className="text-sm text-slate-400 hover:text-amber-400">{d.name}</button></li>
+
+            <div className="lg:col-span-2">
+              <p className="font-mono text-xs uppercase tracking-widest text-slate-500 mb-4">Explore</p>
+              <ul className="space-y-2.5">
+                {[
+                  ["about", "About Us"],
+                  ["leadership", "Leadership"],
+                  ["divisions", "Our Businesses"],
+                  ["affiliates", "Our Group"],
+                  ["projects", "Projects"],
+                  ["research", "Insights"],
+                  ["careers", "Careers"],
+                ].map(([id, label]) => (
+                  <li key={id}>
+                    <button onClick={() => scrollTo(id)} className="text-sm text-slate-400 hover:text-amber-400 transition-colors">
+                      {label}
+                    </button>
+                  </li>
                 ))}
               </ul>
             </div>
-            <div>
-              <p className="font-mono text-xs uppercase tracking-widest text-slate-500 mb-4">Company</p>
-              <ul className="space-y-2">
-                {["about", "projects", "research", "careers"].map((id) => (
-                  <li key={id}><button onClick={() => scrollTo(id)} className="text-sm text-slate-400 hover:text-amber-400 capitalize">{id}</button></li>
+
+            <div className="lg:col-span-3">
+              <p className="font-mono text-xs uppercase tracking-widest text-slate-500 mb-4">Affiliates</p>
+              <div className="grid grid-cols-2 gap-y-2.5 gap-x-4">
+                {AFFILIATES.map((affiliate) => (
+                  <a
+                    key={affiliate.url}
+                    href={affiliate.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sm text-slate-400 hover:text-amber-400 transition-colors"
+                  >
+                    {affiliate.name}
+                  </a>
                 ))}
-              </ul>
+              </div>
             </div>
-            <div>
-              <p className="font-mono text-xs uppercase tracking-widest text-slate-500 mb-4">Get in Touch</p>
-              <ul className="space-y-2">
-                <li><a href={`mailto:${COMPANY.email}`} className="text-sm text-slate-400 hover:text-amber-400">{COMPANY.email}</a></li>
-                <li><a href={`tel:${COMPANY.phone.replace(/\s+/g, "")}`} className="text-sm text-slate-400 hover:text-amber-400">{COMPANY.phone} (Phone)</a></li>
+
+            <div className="lg:col-span-3">
+              <p className="font-mono text-xs uppercase tracking-widest text-slate-500 mb-4">Head Office</p>
+              <ul className="space-y-3">
+                <li className="flex items-start gap-2.5">
+                  <MapPin size={15} className="text-amber-500 mt-0.5 shrink-0" />
+                  <span className="text-sm text-slate-400 leading-relaxed">{COMPANY.address}</span>
+                </li>
+                <li>
+                  <a href={`mailto:${COMPANY.email}`} className="text-sm text-slate-400 hover:text-amber-400">
+                    {COMPANY.email}
+                  </a>
+                </li>
+                <li>
+                  <a href={`tel:${COMPANY.phone.replace(/\s+/g, "")}`} className="text-sm text-slate-400 hover:text-amber-400">
+                    {COMPANY.phone}
+                  </a>
+                </li>
                 <li>
                   <a
                     href={`https://wa.me/${COMPANY.whatsapp.replace(/\D/g, "")}`}
@@ -851,16 +1078,23 @@ export default function EvaGlobalGroup() {
                     rel="noopener noreferrer"
                     className="text-sm text-slate-400 hover:text-amber-400"
                   >
-                    {COMPANY.whatsapp} (WhatsApp)
+                    WhatsApp: {COMPANY.whatsapp}
                   </a>
                 </li>
-                <li><button onClick={() => scrollTo("contact")} className="text-sm text-slate-400 hover:text-amber-400">Contact Center</button></li>
               </ul>
             </div>
           </div>
-          <div className="mt-14 pt-6 border-t border-slate-800 flex flex-wrap items-center justify-between gap-4">
-            <p className="text-xs text-slate-500">© {new Date().getFullYear()} Eva Global Group Limited. All rights reserved.</p>
-            <p className="text-xs text-slate-600 font-mono">GOVERNMENT-READY · INVESTOR-READY</p>
+
+          <div className="mt-14 pt-6 border-t border-slate-800 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+            <p className="text-xs text-slate-500">
+              © {new Date().getFullYear()} Eva Global Group Limited. All rights reserved.
+            </p>
+            <div className="flex items-center gap-4 text-xs text-slate-600 font-mono">
+              <span>INTEGRITY</span>
+              <span>EXCELLENCE</span>
+              <span>INNOVATION</span>
+              <span>IMPACT</span>
+            </div>
           </div>
         </div>
       </footer>
