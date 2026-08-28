@@ -15,7 +15,7 @@ import {
 
 const COMPANY = {
   email: "info@evaglobalgroup.com",
-  phone: "+234 806 916 8955",
+  phone: "+234 8133044666",
   whatsapp: "+234 906 958 0514",
   address: "Second Floor, Block D61–62, EFAB Mall, Area 11, Garki 2, Abuja, Nigeria",
 };
@@ -447,7 +447,7 @@ export default function EvaGlobalGroup() {
                 <img
                   src={LEADERSHIP.image}
                   alt={LEADERSHIP.name}
-                  className="absolute inset-0 w-full h-full object-cover object-top"
+                  className="absolute inset-0 w-full h-full object-cover object-[50%_25%]"
                 />
               ) : (
                 <div className="absolute inset-0 flex items-center justify-center bg-[radial-gradient(circle_at_50%_35%,rgba(245,158,11,0.18),transparent_35%),linear-gradient(145deg,#0f172a,#020617)]">
